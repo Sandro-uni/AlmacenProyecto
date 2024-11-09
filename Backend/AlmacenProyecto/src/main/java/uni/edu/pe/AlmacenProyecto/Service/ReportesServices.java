@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import uni.edu.pe.AlmacenProyecto.dto.ReporteProductosDto;
+import uni.edu.pe.AlmacenProyecto.dto.ProductosDto;
 import uni.edu.pe.AlmacenProyecto.dto.ReporteInventarioDto;
 
 
@@ -17,9 +17,9 @@ public class ReportesServices {
 	@Autowired
 	private JdbcTemplate jdbcTempla;
 	
-	public List<ReporteProductosDto> reporteProductos(){
+	public List<ProductosDto> reporteProductos(){
 		String sql="Select * From Producto";
-		return jdbcTempla.query(sql, new BeanPropertyRowMapper<>(ReporteProductosDto.class));
+		return jdbcTempla.query(sql, new BeanPropertyRowMapper<>(ProductosDto.class));
 	}
 	
 	public List<ReporteInventarioDto> reporteInventario(){

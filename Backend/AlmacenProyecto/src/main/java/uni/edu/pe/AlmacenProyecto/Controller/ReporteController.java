@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import uni.edu.pe.AlmacenProyecto.dto.ReporteProductosDto;
+import uni.edu.pe.AlmacenProyecto.dto.ProductosDto;
 
 @RestController
 @RequestMapping("/Reporte")
@@ -23,7 +23,7 @@ public class ReporteController {
 	private ReportesServices service;
 	
 	@GetMapping("/productos")
-	public List<ReporteProductosDto> productos(){
+	public List<ProductosDto> productos(){
 		return service.reporteProductos();
 	}
 	
