@@ -11,6 +11,8 @@ import uni.edu.pe.AlmacenProyecto.dto.ProductoGuardarDto;
 import uni.edu.pe.AlmacenProyecto.dto.ProductosDto;
 
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 
 @RestController
@@ -32,5 +34,10 @@ public class ProductoController {
 	@PostMapping("/eliminar")
 	public void eliminar(@RequestParam int id_producto) {
 		service.eliminarProducto(id_producto);
+	}
+	
+	@GetMapping("/consultar")
+	public ProductosDto consultar(@RequestParam int id_producto) {
+		return service.consultar(id_producto);
 	}
 }

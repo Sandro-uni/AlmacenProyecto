@@ -1,6 +1,9 @@
 package uni.edu.pe.AlmacenProyecto.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
@@ -40,4 +43,16 @@ public class ProductoService {
 		String sql="DELETE FROM Producto WHERE id_producto=?;";
 		jdbctempla.update(sql,id_producto);
 	}
+	
+	//consultar producto
+	public ProductosDto consultar(int id_producto){
+		String sql="SELECT id_producto, nombre, descripcion, id_categoria, precio, costo_almacen FROM Producto Where id_producto=?";
+		return jdbctempla.queryForObject(sql,new BeanPropertyRowMapper<>(ProductosDto.class),id_producto);
+	}
 }
+
+
+
+
+
+
