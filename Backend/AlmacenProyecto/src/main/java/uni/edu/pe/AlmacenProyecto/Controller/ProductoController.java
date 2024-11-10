@@ -3,6 +3,7 @@ package uni.edu.pe.AlmacenProyecto.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import uni.edu.pe.AlmacenProyecto.Service.ProductoService;
@@ -28,4 +29,8 @@ public class ProductoController {
 		service.actualizarProducto(bean);
 	}
 	
+	@PostMapping("/eliminar")
+	public void eliminar(@RequestParam int id_producto) {
+		service.eliminarProducto(id_producto);
+	}
 }

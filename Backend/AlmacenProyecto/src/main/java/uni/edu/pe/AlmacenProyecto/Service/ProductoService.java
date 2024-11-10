@@ -35,8 +35,9 @@ public class ProductoService {
 		jdbctempla.update(sql,bean.getNombre(),bean.getDescripcion(),bean.getId_categoria(),bean.getPrecio(),bean.getCosto_almacen(),bean.getId_producto());
 		
 	}
+	//eliminar productos recibiendo su id del producto
 	public void eliminarProducto(int id_producto) {
-		String sql="";
-		
+		String sql="DELETE FROM Producto WHERE id_producto=?;";
+		jdbctempla.update(sql,id_producto);
 	}
 }
