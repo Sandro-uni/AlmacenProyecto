@@ -13,6 +13,8 @@ import uni.edu.pe.AlmacenProyecto.dto.ProductosDto;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.List;
+
 
 
 @RestController
@@ -39,5 +41,10 @@ public class ProductoController {
 	@GetMapping("/consultar")
 	public ProductosDto consultar(@RequestParam int id_producto) {
 		return service.consultar(id_producto);
+	}
+	
+	@GetMapping("/lista")
+	public List<ProductosDto> lista() {
+		return service.lista();
 	}
 }

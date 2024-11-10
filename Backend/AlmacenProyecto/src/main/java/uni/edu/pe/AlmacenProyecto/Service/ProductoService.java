@@ -2,6 +2,8 @@ package uni.edu.pe.AlmacenProyecto.Service;
 
 import java.util.List;
 
+import javax.swing.tree.RowMapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -48,6 +50,12 @@ public class ProductoService {
 	public ProductosDto consultar(int id_producto){
 		String sql="SELECT id_producto, nombre, descripcion, id_categoria, precio, costo_almacen FROM Producto Where id_producto=?";
 		return jdbctempla.queryForObject(sql,new BeanPropertyRowMapper<>(ProductosDto.class),id_producto);
+	}
+	
+	//conseguir lista de productos
+	public List<ProductosDto> lista(){
+		String sql="Select id_producto, nombre, descripcion, id_categoria, precio, costo_almacen FROM Producto";
+		return jdbctempla.query(sql, new BeanPropertyRowMapper<>(ProductosDto.class));
 	}
 }
 
