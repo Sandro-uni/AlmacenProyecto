@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import uni.edu.pe.AlmacenProyecto.Service.ProductoService;
 import uni.edu.pe.AlmacenProyecto.dto.ProductoGuardarDto;
+import uni.edu.pe.AlmacenProyecto.dto.ProductosDto;
 
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -20,6 +21,11 @@ public class ProductoController {
 	@PostMapping("/agregar")
 	public void agregar(@RequestBody ProductoGuardarDto bean) {
 		service.agregarProducto(bean);
+	}
+	
+	@PostMapping("/actualizar")
+	public void actualizar(@RequestBody ProductosDto bean) {
+		service.actualizarProducto(bean);
 	}
 	
 }

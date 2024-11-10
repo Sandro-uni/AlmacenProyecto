@@ -27,4 +27,16 @@ public class ProductoService {
 		
 		jdbctempla.update(sql,id,bean.getExistencias(),bean.getMax_existencias(),bean.getMin_existencias());
 	}
+	
+	public void actualizarProducto(ProductosDto bean) {
+		String sql="update Producto ";
+		sql+="Set nombre=?,descripcion=?,id_categoria=?,precio=?,costo_almacen=? ";
+		sql+="where id_producto=?;";
+		jdbctempla.update(sql,bean.getNombre(),bean.getDescripcion(),bean.getId_categoria(),bean.getPrecio(),bean.getCosto_almacen(),bean.getId_producto());
+		
+	}
+	public void eliminarProducto(int id_producto) {
+		String sql="";
+		
+	}
 }
