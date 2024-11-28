@@ -17,6 +17,7 @@ public class InicioService {
 		
 		String sql="SELECT id_rol FROM Usuario where logUsuario=? and pass=? ";
 		try {
+			//System.out.println("estos son los valores a buscar: "+bean.getUsuario()+"  "+bean.getPass());
 			return jdbcTemplate.queryForObject(sql,Integer.class,bean.getUsuario(),bean.getPass());
 		} catch (EmptyResultDataAccessException e) {
 			throw new IllegalArgumentException("Usuario o contraseña inválidos");
