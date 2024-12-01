@@ -1,6 +1,7 @@
 
 import { useState } from "react"
 import axios from "axios";
+import { Navigate } from 'react-router-dom';
 
 export const Usuario = ({nombre, largo}) =>{
     const [usuario,setUsuario] = useState("");
@@ -24,6 +25,7 @@ export const Usuario = ({nombre, largo}) =>{
 
             const id_rol=response.data; //almacenando el id rol obtenido
             console.log("esto seria el idrol "+id_rol);
+            Navigate(`/Principal/${id_rol}`);
             
         } catch (error) {
             //mensaje de testeo
