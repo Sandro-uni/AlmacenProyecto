@@ -9,7 +9,7 @@ export const Menu = () => {
 
     return (
         <div>
-            <ul  className='ListaPrincipal'>
+            <ul className='ListaPrincipal'>
                 <li>
                     <span onClick={()=>cambiarSubmenu('producto')}>Producto</span>
                     {activoSubmenu === 'producto' && (
