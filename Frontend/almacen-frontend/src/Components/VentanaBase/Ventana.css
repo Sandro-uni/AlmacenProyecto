@@ -1,0 +1,60 @@
+.MaxContenedor {
+  height: 100vh;  /*toda la pantalla vertical*/
+  display: flex;
+  flex-direction: column;
+}
+
+.Encabezado {
+  background-color: #4942ad;  /* color fondo */
+  color: white;  /*color texto */
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;  /*elementos en los extremos*/
+}
+
+.botonCerrarSesion {
+  font-weight: bold;  /* font-bold */
+  transition: background-color 0.3s ease;  /*transicion*/
+  border-radius: 0.375rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 1.75rem ;
+
+}
+.botonCerrarSesion:hover{
+  background-color: #c53030;
+}
+.Contenido {
+  display: flex;
+  /* flexible */
+  flex: 1;
+  justify-content: space-between;
+}
+/*Menu configuracion CSS*/
+.Menu {
+  background-color: #a8a3ea;
+  width: 25%;  /* 25% del ancho del contenedor padre */
+  padding: 1rem;  /* padding 1% contenedor */
+  display: flex;
+  flex-direction: column;
+}
+.ListaPrincipal{
+  list-style-type: none; /*quitar puntos de la lista*/
+  align-self: center;
+}
+.ListaPrincipal li{
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px; /*esquina redondeada*/
+}
+.ListaPrincipal li:hover{
+  background-color: #e0e0e0;
+}
+
+/*Formularios configuracion CSS*/
+.Formularios {
+  background-color: #d3d1f5;
+  /*fondo contraste */
+  flex: 1;
+  padding: 1rem;
+}
