@@ -1,5 +1,5 @@
 .MaxContenedor {
-  height: 100vh;  /*toda la pantalla vertical*/
+  height: 100%;  /*toda la pantalla vertical*/
   display: flex;
   flex-direction: column;
 }
@@ -11,6 +11,8 @@
   padding: 1rem;
   align-items: center;
   justify-content: space-between;  /*elementos en los extremos*/
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 .botonCerrarSesion {
@@ -25,30 +27,53 @@
   background-color: #c53030;
 }
 .Contenido {
-  display: flex;
-  /* flexible */
+  display: flex;  /* flexible */
   flex: 1;
   justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
 }
 /*Menu configuracion CSS*/
 .Menu {
   background-color: #a8a3ea;
   width: 25%;  /* 25% del ancho del contenedor padre */
-  padding: 1rem;  /* padding 1% contenedor */
+  padding-top: 1rem;  /* padding 1% contenedor */
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .ListaPrincipal{
-  list-style-type: none; /*quitar puntos de la lista*/
-  align-self: center;
+  margin:25px;
+  padding:0;
+  width: 80%;
 }
-.ListaPrincipal li{
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px; /*esquina redondeada*/
+.elementoPrincipal{
+  padding-top: 0.75rem;
+  width: 100%;
+  margin: 0;
+  font-size: 1.5rem;
+  background-color: #61acf3a6;
+  /*border-radius: 5px; /*esquina redondeada*/
+  display: block;  
 }
+.submenuPrincipal{
+  width: 100%;
+  font-size: 1.5rem;
+  display: block;
+  background-color: #61acf3a6;
+}
+
 .ListaPrincipal li:hover{
   background-color: #e0e0e0;
+}
+.ListaSecundaria{
+  background-color: #7aa2cfe1;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+.ListaSecundaria li{
+  margin: 0rem;
 }
 
 /*Formularios configuracion CSS*/
@@ -57,4 +82,5 @@
   /*fondo contraste */
   flex: 1;
   padding: 1rem;
+  overflow-y: auto;
 }

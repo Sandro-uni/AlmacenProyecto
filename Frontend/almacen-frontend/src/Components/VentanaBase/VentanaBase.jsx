@@ -1,13 +1,19 @@
 
-import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { RangoDeUsuario } from './Rango';
+import {Formulario} from '../FormularioComponents/Formulario'
 import { Menu } from './Menu';
 import './Ventana.css';
+import { useState } from 'react';
 
 export const VentanaBase=()=>{
-  //const { idrl } = 1;
   const { idrl } = useParams();
   const numero_id = parseInt(idrl, 10);
+  const [OpcionEscogida,setOpcionEscogida]=useState("");
+
+  const cambiarOpcion=(e)=>{
+    setOpcionEscogida(e);
+  }
     return (
         <div className="MaxContenedor">
           
@@ -17,12 +23,10 @@ export const VentanaBase=()=>{
             </div>
             <div className="Contenido">
               <div className="Menu">
-                <span >Texto de prueba en menu</span>
-                <Menu />
-
+                <Menu funcionrecibida={cambiarOpcion}/> {/*pasando la funcion como parametro*/}
               </div>
               <div className="Formularios">
-                texto de prueba para Formularios un poco largo para probar como anda
+                <Formulario action={OpcionEscogida}/>
               </div>
             </div>
           
