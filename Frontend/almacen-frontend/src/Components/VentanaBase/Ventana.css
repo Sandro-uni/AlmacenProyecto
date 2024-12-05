@@ -5,7 +5,7 @@
 }
 
 .Encabezado {
-  background-color: #4942ad;  /* color fondo */
+  background-color: #3e7092;  /* color fondo */
   color: white;  /*color texto */
   display: flex;
   padding: 1rem;
@@ -36,7 +36,7 @@
 }
 /*Menu configuracion CSS*/
 .Menu {
-  background-color: #a8a3ea;
+  background-color: #87c5c1de;
   width: 25%;  /* 25% del ancho del contenedor padre */
   padding-top: 1rem;  /* padding 1% contenedor */
   display: flex;
@@ -53,15 +53,15 @@
   width: 100%;
   margin: 0;
   font-size: 1.5rem;
-  background-color: #61acf3a6;
-  /*border-radius: 5px; /*esquina redondeada*/
+  background-color: #5b7472;
+  border-radius: 5px; /*esquina redondeada*/
   display: block;  
 }
 .submenuPrincipal{
   width: 100%;
   font-size: 1.5rem;
   display: block;
-  background-color: #61acf3a6;
+  background-color: #9fc1e09c;
 }
 
 .ListaPrincipal li:hover{

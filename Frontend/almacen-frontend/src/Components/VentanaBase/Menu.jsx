@@ -28,7 +28,7 @@ export const Menu = ({funcionrecibida}) => {
                         <ul className='ListaSecundaria'>
                             <li style={{  cursor: 'pointer' }} onClick={() => formularioEscogido('crearP')}>Crear Producto</li>
                             <li style={{  cursor: 'pointer' }} onClick={() => formularioEscogido('modificarP')}>Modificar Producto</li>
-                            <li style={{  cursor: 'pointer' }}>Consultar Producto</li>
+                            <li style={{  cursor: 'pointer' }} onClick={() => formularioEscogido('consultarP')}>Consultar Producto</li>
                             <li style={{  cursor: 'pointer' }}>Eliminar Producto</li>
                         </ul>
                 )}
@@ -39,7 +39,7 @@ export const Menu = ({funcionrecibida}) => {
             <li className='submenuPrincipal'>
                 {activoSubmenu === 'inventario' && (
                         <ul className='ListaSecundaria'>
-                            <li style={{  cursor: 'pointer' }}>Reporte Inventario</li>
+                            <li style={{  cursor: 'pointer' }} onClick={() => formularioEscogido('reporteI')}>Reporte Inventario</li>
                             <li style={{  cursor: 'pointer' }}>Modificar Inventario</li>
                             <li style={{  cursor: 'pointer' }}>Consultar Inventario</li>
                         </ul>

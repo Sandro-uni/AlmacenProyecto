@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Formulario.css'
+
 
 export const ModificarProducto = () => {
     const [IdProducto,setIdProducto]=useState("");
@@ -48,7 +48,7 @@ export const ModificarProducto = () => {
     }
 
     //envio del formulario
-    async function envioCrearProducto(e){
+    async function envioModificarProducto(e){
         e.preventDefault();
         try{
 
@@ -59,7 +59,7 @@ export const ModificarProducto = () => {
 
     return ( 
         <div>
-            <form className='CrearProducto' onSubmit={envioCrearProducto}>
+            <form className='CrearProducto' onSubmit={envioModificarProducto}>
                 <div className="campo">
                     <label className="label1">Id del producto a modificar:</label> 
                     <input className="input" type="number" value={IdProducto} onChange={actualizarIdProducto} />
@@ -85,7 +85,7 @@ export const ModificarProducto = () => {
                     <label className="label1">Nuevo costo de almacenamiento mensual:</label> 
                     <input className="input" type="number" value={costoalmP} onChange={actualizarCostoalmP} />
                 </div>
-                <button type='sybmit'>Enviar</button>
+                <button type='submit'>Enviar</button>
             </form> 
         </div>
     );

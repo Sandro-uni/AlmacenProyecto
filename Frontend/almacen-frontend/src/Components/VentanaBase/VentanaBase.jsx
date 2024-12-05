@@ -6,6 +6,7 @@ import { Menu } from './Menu';
 import './Ventana.css';
 import { useState } from 'react';
 
+
 export const VentanaBase=()=>{
   const { idrl } = useParams();
   const numero_id = parseInt(idrl, 10);
