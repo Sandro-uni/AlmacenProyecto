@@ -1,7 +1,7 @@
 
 import { ConsultarProducto } from './ConsultarProducto';
-import './Formulario.css'
-import { CrearProducto } from './CrearProducto';
+import './Formulario.css';
+import { CrearProducto } from "./CrearProducto";
 import {ModificarProducto} from './ModificarProducto';
 import {ReporteInventario} from './ReporteInventario';
 
